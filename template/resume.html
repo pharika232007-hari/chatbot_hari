@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+    <h1>Job Match Results</h1>
+
+    <table border="1" style="margin:auto;">
+        <tr>
+            <th>Job Title</th>
+            <th>Match Score</th>
+        </tr>
+
+        {% for job in results %}
+        <tr>
+            <td>{{ job.title }}</td>
+            <td>{{ job.score }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Upload Another Resume</a>
+
+</body>
+</html>
